@@ -65,7 +65,8 @@
       "alternateName": "Lishui Knowledge Portal",
       "description": "江苏南京溧水区的历史、文化与传统知识库，10 个主题分站，中英双语，来源可追溯。",
       "inLanguage": ["zh-Hans", "en"],
-      "publisher": { "@id": "https://lishui.org/#organization" }
+      "publisher": { "@id": "https://lishui.org/#organization" },
+      "hasPart": { "@id": "https://lishi.lishui.org/#website" }
     },
     {
       "@type": "Organization",
@@ -74,6 +75,17 @@
       "alternateName": "Lishui Knowledge",
       "url": "https://lishui.org/",
       "areaServed": { "@type": "AdministrativeArea", "name": "江苏省南京市溧水区" }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://lishi.lishui.org/#website",
+      "url": "https://lishi.lishui.org/",
+      "name": "溧水历史志",
+      "alternateName": "Lishui History",
+      "description": "溧水历史志：建置沿革、历代大事记、文物古迹与旧志考据，中英双语，逐条标注来源。",
+      "inLanguage": ["zh-Hans", "en"],
+      "isPartOf": { "@id": "https://lishui.org/#website" },
+      "publisher": { "@id": "https://lishui.org/#organization" }
     }
   ]
 }
@@ -82,6 +94,15 @@
 <body>
 
 <a class="skip-link" href="#main">跳到主要内容</a>
+
+<div class="netbar">
+  <div class="wrap netbar__inner">
+    <span class="netbar__here">溧水知识门户</span>
+    <span class="netbar__sites">
+      <a class="netbar__site" href="https://lishi.lishui.org/">溧水历史志<span class="netbar__dot" aria-hidden="true"></span></a>
+    </span>
+  </div>
+</div>
 
 <header class="topbar">
   <div class="wrap topbar__inner">

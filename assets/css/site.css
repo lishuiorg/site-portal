@@ -204,6 +204,50 @@ svg { display: block; }
 }
 .skip-link:focus { transform: translate(-50%, 0); }
 
+/* ---------- 站群带 ----------
+   门户与分站共用一条细带：门户这头列已上线的分站，分站那头指回门户。
+   从搜索引擎直接落进分站的读者，靠它知道自己在站群里的位置。 */
+
+.netbar {
+  background: var(--surface-2);
+  border-bottom: 1px solid var(--line);
+  font-family: var(--font-mono);
+  font-size: var(--t-xs);
+  letter-spacing: .04em;
+}
+
+.netbar__inner {
+  min-height: 34px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.netbar__here { color: var(--ink-3); }
+
+.netbar__sites {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-left: auto;
+}
+
+.netbar__site {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--ink-3);
+  text-decoration: none;
+  transition: color .18s var(--ease-soft);
+}
+.netbar__site:hover { color: var(--brand); }
+.netbar__dot {
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--brand);
+  box-shadow: 0 0 0 3px var(--brand-soft);
+}
+
 /* ---------- 顶栏 ---------- */
 
 .topbar {
