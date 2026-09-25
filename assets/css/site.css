@@ -1028,11 +1028,16 @@ svg { display: block; }
   gap: 6px;
 }
 .status[data-status="building"] { color: var(--seal); }
-.status[data-status="building"]::before {
+.status[data-status="live"] { color: var(--brand); }
+.status[data-status="building"]::before,
+.status[data-status="live"]::before {
   content: "";
   width: 5px; height: 5px;
   border-radius: 50%;
-  background: var(--seal);
+  background: currentColor;
+}
+.status[data-status="live"]::before {
+  box-shadow: 0 0 0 3px var(--brand-soft);
 }
 
 /* ---------- 编纂凡例 ---------- */
