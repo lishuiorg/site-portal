@@ -779,12 +779,12 @@ svg { display: block; }
   transform-origin: left;
   transition: transform .45s var(--ease);
 }
-.topic:hover {
+.topic[href]:hover {
   border-color: var(--line-strong);
   box-shadow: var(--shadow);
   transform: translateY(-3px);
 }
-.topic:hover::before { transform: scaleX(1); }
+.topic[href]:hover::before { transform: scaleX(1); }
 
 .topic--lead {
   grid-row: span 2;
@@ -836,6 +836,7 @@ svg { display: block; }
   background: var(--bg-soft);
 }
 .topic--lead .chip { border-color: var(--brand-line); color: var(--brand-ink); background: var(--brand-soft); }
+.topic__status { margin-left: auto; align-self: center; }
 
 .noresult {
   display: none;
@@ -879,8 +880,8 @@ svg { display: block; }
   transform-origin: left;
   transition: transform .45s var(--ease);
 }
-.dim:hover { background: var(--brand-soft); }
-.dim:hover::after { transform: scaleX(1); }
+.dim[href]:hover { background: var(--brand-soft); }
+.dim[href]:hover::after { transform: scaleX(1); }
 
 .dim__char {
   font-family: var(--font-serif);
@@ -889,7 +890,7 @@ svg { display: block; }
   color: var(--ink);
   transition: color .35s var(--ease-soft), transform .45s var(--ease);
 }
-.dim:hover .dim__char { color: var(--brand); transform: translateY(-2px); }
+.dim[href]:hover .dim__char { color: var(--brand); transform: translateY(-2px); }
 
 .dim__label {
   font-size: var(--t-xs);
@@ -902,6 +903,18 @@ svg { display: block; }
   font-size: var(--t-sm);
   color: var(--ink-2);
   line-height: 1.5;
+}
+
+/* 维度卡与专题卡的状态：已上线的可点进入，其余写明在建或规划中，
+   免得读者点了没反应却不知为何。标记沿用站点矩阵的 .status。 */
+.dim__status { margin-top: -6px; }
+.dim__status::before,
+.topic__status::before {
+  content: "";
+  flex: none;
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: currentColor;
 }
 
 /* ---------- 站点矩阵 ---------- */
@@ -961,8 +974,8 @@ svg { display: block; }
   transition: transform .45s var(--ease);
 }
 .group--app .row::before { background: var(--gold); }
-.row:hover { background: var(--bg-soft); }
-.row:hover::before { transform: scaleY(1); }
+.row[href]:hover { background: var(--bg-soft); }
+.row[href]:hover::before { transform: scaleY(1); }
 
 .row__no {
   font-family: var(--font-serif);
@@ -977,7 +990,7 @@ svg { display: block; }
   letter-spacing: -.005em;
   transition: color .25s var(--ease-soft);
 }
-.row:hover .row__name { color: var(--brand-ink); }
+.row[href]:hover .row__name { color: var(--brand-ink); }
 .group--app .row:hover .row__name { color: var(--gold-ink); }
 .row__alt {
   display: block;
@@ -1136,7 +1149,22 @@ svg { display: block; }
   width: fit-content;
   transition: color .18s var(--ease-soft);
 }
-.footer__links a:hover { color: var(--brand-ink); }
+.footer__links a[href]:hover { color: var(--brand-ink); }
+
+/* ---------- 未上线的分站不链接 ----------
+   *.lishui.org 是泛解析，未上线子域也能解析到 GitHub Pages，
+   但没有站点认领的主机名不签发证书，点下去是 TLS 报错而不是 404。
+   门户去掉这些链接的 href，由下面几条收掉链接的外观与悬停反馈；
+   分站上线后把子域加进 sites.json 的 status: live 并恢复 href。 */
+
+.row:not([href]),
+.topic:not([href]),
+.dim:not([href]),
+.footer__links a:not([href]) { cursor: default; }
+
+.dim:not([href]) .dim__char { color: var(--ink-3); }
+.dim:not([href]) .dim__site { color: var(--ink-4); }
+.footer__links a:not([href]) { color: var(--ink-4); }
 .footer__bottom {
   display: flex;
   flex-wrap: wrap;
