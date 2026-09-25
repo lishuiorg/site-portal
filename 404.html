@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-Hans" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>页面不存在 · 溧水知识门户</title>
+<meta name="description" content="溧水知识门户：你要找的页面不存在或已改址。">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#F6F4EE">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+
+<script>
+  /* 在样式生效前定好主题，避免刷新时先亮后暗 */
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem('lishui-theme'); } catch (e) { /* 隐私模式 */ }
+    if (!t) {
+      t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    document.documentElement.setAttribute('data-theme', t);
+    var m = document.querySelector('meta[name="theme-color"]');
+    if (m) m.setAttribute('content', t === 'dark' ? '#0C1211' : '#F6F4EE');
+  })();
+</script>
+
+<link rel="stylesheet" href="/assets/css/site.css">
+<style>
+  .nf { max-width: 660px; margin: 0 auto; padding: 84px 0 120px; }
+  .nf__code { font-family: var(--font-mono); font-size: 13px; letter-spacing: .16em; color: var(--ink-3); }
+  .nf__title { margin: 14px 0 0; font-size: clamp(30px, 5vw, 46px); line-height: 1.24; }
+  .nf__lede { margin-top: 18px; color: var(--ink-2); font-size: 17px; }
+  .nf__en { margin-top: 12px; color: var(--ink-3); font-size: 15px; }
+  .nf__links { margin-top: 34px; display: flex; flex-wrap: wrap; gap: 12px; }
+  .nf__link {
+    display: inline-flex; align-items: center; padding: 11px 20px;
+    border: 1px solid var(--line-strong); border-radius: var(--radius);
+    background: var(--surface); color: var(--ink); font-size: 15px; text-decoration: none;
+    transition: border-color .16s, background-color .16s, color .16s, transform .16s;
+  }
+  .nf__link:hover { border-color: var(--brand); color: var(--brand-ink); transform: translateY(-1px); }
+  .nf__link--primary { background: var(--brand); border-color: var(--brand); color: #FFFFFF; }
+  .nf__link--primary:hover { background: var(--brand-ink); border-color: var(--brand-ink); color: #FFFFFF; }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar__inner">
+    <a class="wordmark" href="/" aria-label="溧水知识门户首页">
+      <svg class="wordmark__mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <path d="M4 21c4.2 0 5.8-9 10-9s5.8 9 10 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <path d="M4 26c4.2 0 5.8-5.5 10-5.5s5.8 5.5 10 5.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity=".45"/>
+        <circle cx="16" cy="7" r="3" stroke="currentColor" stroke-width="2"/>
+      </svg>
+      <span>
+        <span class="wordmark__text">溧水知识</span>
+        <span class="wordmark__sub">Lishui · Nanjing</span>
+      </span>
+    </a>
+
+    <div class="topbar__tools">
+      <div class="langswitch" role="group" aria-label="界面语言">
+        <a href="/" aria-current="true" lang="zh-Hans">中</a>
+        <a href="/en/" lang="en" hreflang="en">EN</a>
+      </div>
+      <button class="iconbtn" type="button" data-theme-toggle aria-pressed="false"
+              aria-label="切换到深色模式" data-label-dark="切换到深色模式" data-label-light="切换到浅色模式">
+        <svg class="iconbtn__sun" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.8"/>
+          <path d="M12 2.6v2.2M12 19.2v2.2M2.6 12h2.2M19.2 12h2.2M5.4 5.4l1.6 1.6M17 17l1.6 1.6M18.6 5.4L17 7M7 17l-1.6 1.6"
+                stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+        <svg class="iconbtn__moon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M20 14.2A8.4 8.4 0 0 1 9.8 4a8.6 8.6 0 1 0 10.2 10.2z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+    <div class="nf">
+      <p class="nf__code">404 · NOT FOUND</p>
+      <h1 class="nf__title">这一页还没有写</h1>
+      <p class="nf__lede">你要找的页面不存在，或者地址已经改过。门户首页已经上线，10 个主题分站还在陆续建设，条目要到对应分站上线后才有。</p>
+      <p class="nf__en">The page you asked for doesn't exist, or its address has changed. The portal is live; the ten themed sub-sites are still being built.</p>
+      <div class="nf__links">
+        <a class="nf__link nf__link--primary" href="/">回到首页</a>
+        <a class="nf__link" href="/#sites">站点矩阵</a>
+        <a class="nf__link" href="/#topics">知识专题</a>
+        <a class="nf__link" href="/en/" hreflang="en" lang="en">English</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script src="/assets/js/site.js"></script>
+</body>
+</html>

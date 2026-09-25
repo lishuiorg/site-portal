@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lishui.org/sitemap-zh.xml
+Sitemap: https://lishui.org/sitemap-en.xml
