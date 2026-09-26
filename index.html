@@ -66,7 +66,10 @@
       "description": "江苏南京溧水区的历史、文化与传统知识库，10 个主题分站，中英双语，来源可追溯。",
       "inLanguage": ["zh-Hans", "en"],
       "publisher": { "@id": "https://lishui.org/#organization" },
-      "hasPart": { "@id": "https://lishi.lishui.org/#website" }
+      "hasPart": [
+        { "@id": "https://lishi.lishui.org/#website" },
+        { "@id": "https://wenhua.lishui.org/#website" }
+      ]
     },
     {
       "@type": "Organization",
@@ -86,6 +89,17 @@
       "inLanguage": ["zh-Hans", "en"],
       "isPartOf": { "@id": "https://lishui.org/#website" },
       "publisher": { "@id": "https://lishui.org/#organization" }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://wenhua.lishui.org/#website",
+      "url": "https://wenhua.lishui.org/",
+      "name": "溧水文化",
+      "alternateName": "Lishui Culture",
+      "description": "溧水文化：非遗项目、传统技艺、文化空间与诗文文献，中英双语，逐条标注来源。",
+      "inLanguage": ["zh-Hans", "en"],
+      "isPartOf": { "@id": "https://lishui.org/#website" },
+      "publisher": { "@id": "https://lishui.org/#organization" }
     }
   ]
 }
@@ -100,6 +114,7 @@
     <span class="netbar__here">溧水一方</span>
     <span class="netbar__sites">
       <a class="netbar__site" href="https://lishi.lishui.org/">溧水历史<span class="netbar__dot" aria-hidden="true"></span></a>
+      <a class="netbar__site" href="https://wenhua.lishui.org/">溧水文化<span class="netbar__dot" aria-hidden="true"></span></a>
     </span>
   </div>
 </div>
@@ -442,11 +457,11 @@
           <span class="dim__site">溧水人物</span>
           <span class="status dim__status">规划中</span>
         </a>
-        <a class="dim">
+        <a class="dim" href="https://wenhua.lishui.org/">
           <span class="dim__char">艺</span>
           <span class="dim__label">技艺</span>
           <span class="dim__site">溧水文化</span>
-          <span class="status dim__status" data-status="building">建设中</span>
+          <span class="status dim__status" data-status="live">已上线</span>
         </a>
         <a class="dim">
           <span class="dim__char">空</span>
@@ -506,7 +521,7 @@
             </span>
           </a>
 
-          <a class="row reveal" data-searchable
+          <a class="row reveal" href="https://wenhua.lishui.org/" data-searchable
              data-search-text="溧水文化 lishui culture 非遗 传统技艺 方言 民俗 节庆 骆山大龙 玉带糕 诗词 第1期">
             <span class="row__no">二</span>
             <span>
@@ -517,7 +532,7 @@
             <span class="row__end">
               <code class="row__host">wenhua.lishui.org</code>
               <span class="badge">第 1 期</span>
-              <span class="status" data-status="building">建设中</span>
+              <span class="status" data-status="live">已上线</span>
             </span>
           </a>
 
@@ -734,7 +749,7 @@
         <h4>通识分站</h4>
         <div class="footer__links">
           <a href="https://lishi.lishui.org/">溧水历史</a>
-          <a>溧水文化</a>
+          <a href="https://wenhua.lishui.org/">溧水文化</a>
           <a>溧水街镇</a>
           <a>溧水人物</a>
           <a>溧水山水</a>

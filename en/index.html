@@ -66,7 +66,11 @@
       "alternateName": "溧水一方",
       "description": "A bilingual, source-traceable knowledge base for Lishui District, Nanjing: ten themed sub-sites on history, culture and tradition.",
       "inLanguage": ["zh-Hans", "en"],
-      "publisher": { "@id": "https://lishui.org/#organization" }
+      "publisher": { "@id": "https://lishui.org/#organization" },
+      "hasPart": [
+        { "@id": "https://lishi.lishui.org/#website" },
+        { "@id": "https://wenhua.lishui.org/#website" }
+      ]
     },
     {
       "@type": "Organization",
@@ -75,6 +79,28 @@
       "alternateName": "溧水一方",
       "url": "https://lishui.org/",
       "areaServed": { "@type": "AdministrativeArea", "name": "Lishui District, Nanjing, Jiangsu" }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://lishi.lishui.org/#website",
+      "url": "https://lishi.lishui.org/",
+      "name": "Lishui History",
+      "alternateName": "溧水历史",
+      "description": "History of Lishui: administrative changes, a chronological record, heritage sites and textual criticism of the old gazetteers. Bilingual, source by source.",
+      "inLanguage": ["zh-Hans", "en"],
+      "isPartOf": { "@id": "https://lishui.org/#website" },
+      "publisher": { "@id": "https://lishui.org/#organization" }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://wenhua.lishui.org/#website",
+      "url": "https://wenhua.lishui.org/",
+      "name": "Lishui Culture",
+      "alternateName": "溧水文化",
+      "description": "Culture of Lishui: intangible heritage, traditional crafts, cultural spaces, poetry and documents. Bilingual, source by source.",
+      "inLanguage": ["zh-Hans", "en"],
+      "isPartOf": { "@id": "https://lishui.org/#website" },
+      "publisher": { "@id": "https://lishui.org/#organization" }
     }
   ]
 }
@@ -89,6 +115,7 @@
     <span class="netbar__here">A Place Called Lishui</span>
     <span class="netbar__sites">
       <a class="netbar__site" href="https://lishi.lishui.org/en/">Lishui History<span class="netbar__dot" aria-hidden="true"></span></a>
+      <a class="netbar__site" href="https://wenhua.lishui.org/en/">Lishui Culture<span class="netbar__dot" aria-hidden="true"></span></a>
     </span>
   </div>
 </div>
@@ -439,11 +466,11 @@
           <span class="dim__site">Lishui People</span>
           <span class="status dim__status">Planned</span>
         </a>
-        <a class="dim">
+        <a class="dim" href="https://wenhua.lishui.org/en/">
           <span class="dim__char">艺</span>
           <span class="dim__label">Craft</span>
           <span class="dim__site">Lishui Culture</span>
-          <span class="status dim__status" data-status="building">In progress</span>
+          <span class="status dim__status" data-status="live">Live</span>
         </a>
         <a class="dim">
           <span class="dim__char">空</span>
@@ -504,7 +531,7 @@
             </span>
           </a>
 
-          <a class="row reveal" data-searchable
+          <a class="row reveal" href="https://wenhua.lishui.org/en/" data-searchable
              data-search-text="Lishui Culture intangible heritage crafts dialect folk custom festivals poetry 溧水文化 非遗 传统技艺 方言 民俗 第1期">
             <span class="row__no">02</span>
             <span>
@@ -515,7 +542,7 @@
             <span class="row__end">
               <code class="row__host">wenhua.lishui.org</code>
               <span class="badge">Phase 1</span>
-              <span class="status" data-status="building">In progress</span>
+              <span class="status" data-status="live">Live</span>
             </span>
           </a>
 
@@ -734,7 +761,7 @@
         <h4>General knowledge</h4>
         <div class="footer__links">
           <a href="https://lishi.lishui.org/en/">Lishui History</a>
-          <a>Lishui Culture</a>
+          <a href="https://wenhua.lishui.org/en/">Lishui Culture</a>
           <a>Lishui Towns</a>
           <a>Lishui People</a>
           <a>Lishui Nature</a>
