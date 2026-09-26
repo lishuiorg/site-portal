@@ -1277,6 +1277,9 @@ svg { display: block; }
   :root { --gutter: 18px; }
   .dims { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .footer__grid { grid-template-columns: minmax(0, 1fr); gap: 34px; }
+  /* 站群带在窄屏放不下「本站 + 几个分站」一行，允许折行，别挤出横向滚动 */
+  .netbar__inner { flex-wrap: wrap; row-gap: 4px; padding: 6px 0; }
+  .netbar__sites { margin-left: 0; flex-wrap: wrap; gap: 4px 14px; }
   .searchbar { flex-wrap: wrap; padding: 12px; }
   .searchbar > svg { display: none; }
   .searchbar input { flex: 1 1 100%; padding: 4px 4px 10px; }
