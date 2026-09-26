@@ -1,6 +1,7 @@
 {
-  "$comment": "溧水一方站点清单。全部 11 个站点（1 门户 + 10 分站）的唯一数据源：站点 ID、名称、域名、层级、上线期、上线状态、内容库、站点库。主规划的 3.2 与 4.7 节均以此为准；门户页面的站点矩阵、各分站的统一导航、DNS 记录都从这里取数，不在代码里硬编码兄弟站点。status 取值：live（已上线，域名可访问）、building（建设中，当期在建）、planned（规划中，未开工）。站点 id 与子域前缀、站点库后缀三者一致。",
+  "$comment": "溧水一方站点清单。全部 11 个站点（1 门户 + 10 分站）的唯一数据源：站点 ID、名称、域名、层级、上线期、上线状态、站点库。主规划的 3.2 与 4.7 节均以此为准；门户页面的站点矩阵、各分站的统一导航、DNS 记录都从这里取数，不在代码里硬编码兄弟站点。status 取值：live（已上线，域名可访问）、building（建设中，当期在建）、planned（规划中，未开工）。站点 id 与子域前缀、站点库后缀三者一致。内容库集中在单库，故 contentRepo 提为顶层单字段，各站条目不再各写一份（写了就是 11 处同值、11 处漂移机会）。",
   "domain": "lishui.org",
+  "contentRepo": "lishui",
   "portal": {
     "id": "menhu",
     "name": "溧水一方",
@@ -9,7 +10,6 @@
     "layer": "portal",
     "phase": 0,
     "status": "live",
-    "contentRepo": null,
     "siteRepo": "site-portal"
   },
   "sites": [
@@ -21,7 +21,6 @@
       "layer": "general",
       "phase": 1,
       "status": "live",
-      "contentRepo": "lishui-history",
       "siteRepo": "site-lishi"
     },
     {
@@ -32,7 +31,6 @@
       "layer": "general",
       "phase": 1,
       "status": "live",
-      "contentRepo": "lishui-culture",
       "siteRepo": "site-wenhua"
     },
     {
@@ -43,7 +41,6 @@
       "layer": "general",
       "phase": 1,
       "status": "live",
-      "contentRepo": "lishui-towns",
       "siteRepo": "site-jiezhen"
     },
     {
@@ -54,7 +51,6 @@
       "layer": "general",
       "phase": 2,
       "status": "planned",
-      "contentRepo": "lishui-people",
       "siteRepo": "site-renwu"
     },
     {
@@ -65,7 +61,6 @@
       "layer": "general",
       "phase": 2,
       "status": "planned",
-      "contentRepo": "lishui-nature",
       "siteRepo": "site-shanshui"
     },
     {
@@ -76,7 +71,6 @@
       "layer": "general",
       "phase": 2,
       "status": "planned",
-      "contentRepo": "lishui-specialties",
       "siteRepo": "site-techan"
     },
     {
@@ -87,7 +81,6 @@
       "layer": "general",
       "phase": 3,
       "status": "planned",
-      "contentRepo": "lishui-books",
       "siteRepo": "site-wenxian"
     },
     {
@@ -98,7 +91,6 @@
       "layer": "functional",
       "phase": 5,
       "status": "planned",
-      "contentRepo": "lishui-travel",
       "siteRepo": "site-lvyou"
     },
     {
@@ -109,7 +101,6 @@
       "layer": "functional",
       "phase": 5,
       "status": "planned",
-      "contentRepo": "lishui-industry",
       "siteRepo": "site-chanye"
     },
     {
@@ -120,7 +111,6 @@
       "layer": "functional",
       "phase": 5,
       "status": "planned",
-      "contentRepo": "lishui-living",
       "siteRepo": "site-shenghuo"
     }
   ]
