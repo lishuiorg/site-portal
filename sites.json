@@ -42,7 +42,7 @@
       "host": "jiezhen.lishui.org",
       "layer": "general",
       "phase": 1,
-      "status": "building",
+      "status": "live",
       "contentRepo": "lishui-towns",
       "siteRepo": "site-jiezhen"
     },
