@@ -1,10 +1,10 @@
 {
-  "$comment": "溧水知识站群站点清单。全部 11 个站点（1 门户 + 10 分站）的唯一数据源：站点 ID、名称、域名、层级、上线期、上线状态、内容库、站点库。主规划的 3.2 与 4.7 节均以此为准；门户页面的站点矩阵、各分站的统一导航、DNS 记录都从这里取数，不在代码里硬编码兄弟站点。status 取值：live（已上线，域名可访问）、building（建设中，当期在建）、planned（规划中，未开工）。",
+  "$comment": "溧水一方站点清单。全部 11 个站点（1 门户 + 10 分站）的唯一数据源：站点 ID、名称、域名、层级、上线期、上线状态、内容库、站点库。主规划的 3.2 与 4.7 节均以此为准；门户页面的站点矩阵、各分站的统一导航、DNS 记录都从这里取数，不在代码里硬编码兄弟站点。status 取值：live（已上线，域名可访问）、building（建设中，当期在建）、planned（规划中，未开工）。站点 id 与子域前缀、站点库后缀三者一致。",
   "domain": "lishui.org",
   "portal": {
     "id": "menhu",
-    "name": "溧水知识门户",
-    "nameEn": "Lishui Knowledge Portal",
+    "name": "溧水一方",
+    "nameEn": "A Place Called Lishui",
     "host": null,
     "layer": "portal",
     "phase": 0,
@@ -15,7 +15,7 @@
   "sites": [
     {
       "id": "lishi",
-      "name": "溧水历史志",
+      "name": "溧水历史",
       "nameEn": "Lishui History",
       "host": "lishi.lishui.org",
       "layer": "general",
@@ -25,19 +25,19 @@
       "siteRepo": "site-lishi"
     },
     {
-      "id": "fengwu",
-      "name": "溧水风物志",
+      "id": "wenhua",
+      "name": "溧水文化",
       "nameEn": "Lishui Culture",
-      "host": "fengwu.lishui.org",
+      "host": "wenhua.lishui.org",
       "layer": "general",
       "phase": 1,
       "status": "building",
       "contentRepo": "lishui-culture",
-      "siteRepo": "site-fengwu"
+      "siteRepo": "site-wenhua"
     },
     {
       "id": "jiezhen",
-      "name": "溧水街镇志",
+      "name": "溧水街镇",
       "nameEn": "Lishui Towns",
       "host": "jiezhen.lishui.org",
       "layer": "general",
@@ -48,7 +48,7 @@
     },
     {
       "id": "renwu",
-      "name": "溧水人物志",
+      "name": "溧水人物",
       "nameEn": "Lishui People",
       "host": "renwu.lishui.org",
       "layer": "general",
@@ -59,7 +59,7 @@
     },
     {
       "id": "shanshui",
-      "name": "溧水山水志",
+      "name": "溧水山水",
       "nameEn": "Lishui Nature",
       "host": "shanshui.lishui.org",
       "layer": "general",
@@ -69,19 +69,19 @@
       "siteRepo": "site-shanshui"
     },
     {
-      "id": "wuchan",
-      "name": "溧水物产志",
-      "nameEn": "Lishui Products",
-      "host": "wuchan.lishui.org",
+      "id": "techan",
+      "name": "溧水特产",
+      "nameEn": "Lishui Specialties",
+      "host": "techan.lishui.org",
       "layer": "general",
       "phase": 2,
       "status": "planned",
-      "contentRepo": "lishui-products",
-      "siteRepo": "site-wuchan"
+      "contentRepo": "lishui-specialties",
+      "siteRepo": "site-techan"
     },
     {
       "id": "wenxian",
-      "name": "溧水文献志",
+      "name": "溧水文献",
       "nameEn": "Lishui Books",
       "host": "wenxian.lishui.org",
       "layer": "general",
@@ -92,7 +92,7 @@
     },
     {
       "id": "lvyou",
-      "name": "游在溧水",
+      "name": "溧水旅游",
       "nameEn": "Lishui Travel",
       "host": "lvyou.lishui.org",
       "layer": "functional",
@@ -103,7 +103,7 @@
     },
     {
       "id": "chanye",
-      "name": "溧水产业志",
+      "name": "溧水产业",
       "nameEn": "Lishui Industry",
       "host": "chanye.lishui.org",
       "layer": "functional",
@@ -114,7 +114,7 @@
     },
     {
       "id": "shenghuo",
-      "name": "溧水生活通",
+      "name": "溧水生活",
       "nameEn": "Lishui Living",
       "host": "shenghuo.lishui.org",
       "layer": "functional",
